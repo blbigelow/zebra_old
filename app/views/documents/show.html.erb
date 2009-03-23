@@ -1,0 +1,28 @@
+<p>
+  <b>Version:</b>
+  <%=h @document.version %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @document.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @document.body %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%=h @document.rating %>
+</p>
+
+<p>
+  <b>Allow comments:</b>
+  <%=h @document.allow_comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

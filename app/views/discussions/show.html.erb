@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @discussion.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @discussion.body %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%=h @discussion.rating %>
+</p>
+
+<p>
+  <b>Answered:</b>
+  <%=h @discussion.answered %>
+</p>
+
+
+<%= link_to 'Edit', edit_discussion_path(@discussion) %> |
+<%= link_to 'Back', discussions_path %>

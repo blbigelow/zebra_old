@@ -1,0 +1,118 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDiscussions (20090322040757)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "discussions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "rating" integer, "answered" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090322040757')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("discussions")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDiscussions (20090322040757)
+Migrating to CreateDocuments (20090322041110)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "version" integer, "title" varchar(255), "body" text, "rating" integer, "allow_comments" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090322041110')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("discussions")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("documents")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 22:14:04) [GET]
+
+ActionController::RoutingError (No route matches "/discusions/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-03-21 22:14:09) [GET]
+  [4;36;1mDiscussion Load (0.4ms)[0m   [0;1mSELECT * FROM "discussions" [0m
+Rendering template within layouts/discussions
+Rendering discussions/index
+Completed in 47ms (View: 43, DB: 0) | 200 OK [http://localhost/discussions/]
+
+
+Processing DiscussionsController#new (for 127.0.0.1 at 2009-03-21 22:14:13) [GET]
+Rendering template within layouts/discussions
+Rendering discussions/new
+Completed in 54ms (View: 50, DB: 0) | 200 OK [http://localhost/discussions/new]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-03-21 22:14:27) [GET]
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/discussions
+Rendering discussions/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/discussions]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-03-21 22:14:37) [GET]
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/documents]
+
+
+Processing DocumentsController#new (for 127.0.0.1 at 2009-03-21 22:16:35) [GET]
+Rendering template within layouts/documents
+Rendering documents/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/documents/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 22:17:06) [GET]
+
+ActionController::RoutingError (No route matches "/discusions/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDiscussions (20090322040757)
+Migrating to CreateDocuments (20090322041110)
+Migrating to CreateBlogs (20090322042928)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090322042928')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("blogs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("discussions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("documents")[0m
