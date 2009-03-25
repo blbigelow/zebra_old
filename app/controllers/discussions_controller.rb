@@ -1,4 +1,6 @@
 class DiscussionsController < ApplicationController
+  before_filter :login_required
+  
   # GET /discussions
   # GET /discussions.xml
   def index

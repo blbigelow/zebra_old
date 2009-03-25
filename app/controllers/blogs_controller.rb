@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  before_filter :login_required
+  
   # GET /blogs
   # GET /blogs.xml
   def index

@@ -1,0 +1,13 @@
+<p>
+  <b>Body:</b>
+  <%=h @blog_comments.body %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @blog_comments.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_blog_comments_path(@blog_comments) %> |
+<%= link_to 'Back', blog_comments_path %>
