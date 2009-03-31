@@ -13,31 +13,24 @@
 <body>
 <div id="header">
   <h1>Zebra</h1>
-  <h2><b><a href="http://www.chameleoncoders.com">The Official Community</a></b></h2>
+  <h2><b><a href="/">The Official Community</a></b></h2>
 </div>
 <div id="content">
   <div id="columnA">
 		<div id="menu-wrap">
 		  <div id="menu">
 		    <ul>
-		      <li class="current_page"><a href="index.html" id="home">Discussions</a></li>
-		      <li><a href="what_we_do.html" id="what_we_do">Blogs</a></li>
-		      <li><a href="how_we_do_it.html" id="how_we_do_it">Documents</a></li>
+		      <li class="current_page"><%= link_to "Discussions", :controller => "discussions", :action => "index" %></li>
+		      <li><%= link_to "Blogs", :controller => "blogs", :action => "index" %></li>
+		      <li><%= link_to "Documents", :controller => "documents", :action => "index" %></li>
 		    </ul>
 		  </div>
-		<h2>Index of Content</h2>
-		<p>This is the greatest community ever</p>
 		</div>
-    <!-- Content files get loaded here by javascript code -->
+		<p style="color: green"><%= flash[:notice] %></p>
+    <%= yield %>
   </div>
   <div id="columnB">
-    <h2>What's new</h2>
-    <ul>
-      <li><a href="http://www.rubyonrails.org/">Ruby On Rails</a></li>
-      <li><a href="http://www.cakephp.org/">Cake PHP</a></li>
-      <li><a href="http://java.sun.com/javaee/">J2EE</a></li>
-      <li><a href="http://www.akelos.org">Akelos</a></li>
-    </ul>
+    <%= yield :left_bar %>
   </div>
   <div style="clear: both;">&nbsp;</div>
 </div>
