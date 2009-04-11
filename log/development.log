@@ -2099,3 +2099,760 @@ Processing DashboardController#index (for 127.0.0.1 at 2009-04-11 00:14:20) [GET
 Rendering template within layouts/application
 Rendering dashboard/index
 Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-04-11 14:53:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Completed in 77ms (View: 73, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-04-11 14:55:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 14:55:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/documents]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-04-11 14:55:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 24ms (View: 22, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-04-11 14:55:41) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"eITfnS/1LbHJIReMLr5DgkyyU2LLejcMUWl7XwyfxBY=", "controller"=>"sessions", "login"=>"bbigelow", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'bbigelow') LIMIT 1[0m
+Redirected to http://localhost:3000/documents
+Completed in 122ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 14:55:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Completed in 65ms (View: 13, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 14:55:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Completed in 73ms (View: 39, DB: 1) | 200 OK [http://localhost/blogs]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 14:55:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDiscussion Load (0.3ms)[0m   [0;1mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Completed in 50ms (View: 34, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 14:55:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://localhost/documents]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 14:55:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Completed in 25ms (View: 9, DB: 0) | 200 OK [http://localhost/blogs]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 14:55:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDiscussion Load (0.3ms)[0m   [0;1mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Completed in 24ms (View: 10, DB: 0) | 200 OK [http://localhost/discussions]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 14:55:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mBlog Load (0.2ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://localhost/blogs]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 14:55:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Completed in 75ms (View: 10, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing DocumentsController#new (for 127.0.0.1 at 2009-04-11 14:55:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"documents"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+Rendering template within layouts/application
+Rendering documents/new
+Completed in 49ms (View: 34, DB: 0) | 200 OK [http://localhost/documents/new]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 14:56:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Completed in 24ms (View: 9, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:00:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Completed in 77ms (View: 12, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-04-11 15:01:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-04-11 15:01:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:01:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Completed in 74ms (View: 59, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 15:01:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mBlog Load (0.2ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Completed in 26ms (View: 12, DB: 0) | 200 OK [http://localhost/blogs]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:02:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Completed in 24ms (View: 9, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:02:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Completed in 73ms (View: 59, DB: 0) | 200 OK [http://localhost/discussions]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 15:02:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mBlog Load (0.2ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Completed in 25ms (View: 9, DB: 0) | 200 OK [http://localhost/blogs]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:02:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://localhost/documents]
+
+
+Processing DocumentsController#new (for 127.0.0.1 at 2009-04-11 15:02:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"documents"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+Rendering template within layouts/application
+Rendering documents/new
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://localhost/documents/new]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:02:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Completed in 25ms (View: 9, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:02:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDiscussion Load (0.3ms)[0m   [0;1mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#new (for 127.0.0.1 at 2009-04-11 15:02:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"discussions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+Rendering template within layouts/application
+Rendering discussions/new
+Completed in 27ms (View: 12, DB: 0) | 200 OK [http://localhost/discussions/new]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:02:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Completed in 25ms (View: 9, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:27:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.4ms)
+Completed in 27ms (View: 12, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:27:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.4ms)
+Completed in 74ms (View: 59, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:27:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.3ms)
+Completed in 28ms (View: 12, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:30:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+
+ActionView::TemplateError (Missing template popular/_documents.erb in view path app/views) on line #30 of app/views/layouts/application.erb.html:
+27:   </div>
+28:   <div id="columnB">
+29: 		<%= render :partial => "users/top_users" %>
+30:     <%= render :partial => "popular/documents" %>
+31:   </div>
+32:   <div style="clear: both;">&nbsp;</div>
+33: </div>
+
+    app/views/layouts/application.erb.html:30
+    app/controllers/discussions_controller.rb:9:in `index'
+
+Rendered rescues/_trace (38.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:30:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.4ms)
+Completed in 28ms (View: 13, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:31:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:31:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 25ms (View: 10, DB: 0) | 200 OK [http://localhost/discussions]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 15:32:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mBlog Load (0.2ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 24ms (View: 10, DB: 0) | 200 OK [http://localhost/blogs]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:32:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 75ms (View: 10, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:32:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-04-11 15:32:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:33:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 24ms (View: 10, DB: 0) | 200 OK [http://localhost/discussions]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:33:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 15:33:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mBlog Load (0.2ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://localhost/blogs]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:33:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:36:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 26ms (View: 10, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 15:37:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mBlog Load (0.3ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 25ms (View: 9, DB: 1) | 200 OK [http://localhost/blogs]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:37:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:37:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 75ms (View: 10, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:39:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:39:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 74ms (View: 10, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 15:39:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mBlog Load (0.2ms)[0m   [0mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/blogs]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:39:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:39:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 74ms (View: 60, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#new (for 127.0.0.1 at 2009-04-11 15:39:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+Rendering template within layouts/application
+Rendering discussions/new
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 25ms (View: 9, DB: 0) | 200 OK [http://localhost/discussions/new]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 15:39:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 24ms (View: 10, DB: 0) | 200 OK [http://localhost/blogs]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:39:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:39:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDiscussion Load (0.3ms)[0m   [0;1mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 15:39:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mBlog Load (0.2ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 24ms (View: 9, DB: 1) | 200 OK [http://localhost/blogs]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:39:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/documents]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:39:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDiscussion Load (0.3ms)[0m   [0;1mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2009-04-11 15:55:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"dashboard"}
+Rendering template within layouts/application
+Rendering dashboard/index
+Rendered users/_top_users (0.4ms)
+Rendered dashboard/_recent_items (0.3ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DiscussionsController#index (for 127.0.0.1 at 2009-04-11 15:55:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;35;1mDiscussion Load (0.3ms)[0m   [0mSELECT * FROM "discussions" [0m
+Rendering template within layouts/application
+Rendering discussions/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 46ms (View: 15, DB: 1) | 200 OK [http://localhost/discussions]
+
+
+Processing DiscussionsController#new (for 127.0.0.1 at 2009-04-11 15:55:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"discussions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Discussion:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/discussion", :mysql_fast_batches=>true, :name=>:discussion, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/discussion", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+Rendering template within layouts/application
+Rendering discussions/new
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 72ms (View: 12, DB: 0) | 200 OK [http://localhost/discussions/new]
+
+
+Processing BlogsController#index (for 127.0.0.1 at 2009-04-11 15:55:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"blogs"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Blog:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/blog", :mysql_fast_batches=>true, :name=>:blog, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/blog", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mBlog Load (0.3ms)[0m   [0;1mSELECT * FROM "blogs" [0m
+Rendering template within layouts/application
+Rendering blogs/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.1ms)
+Completed in 27ms (View: 12, DB: 1) | 200 OK [http://localhost/blogs]
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2009-04-11 15:56:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"documents"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+configured index for class Document:
+{:user_default_field=>nil, :enabled=>true, :fields=>[:title, :body], :index_dir=>"/Users/bbigelow/dev/zebra/index/development/document", :mysql_fast_batches=>true, :name=>:document, :single_index=>false, :reindex_batch_size=>1000, :raise_drb_errors=>false, :registered_models=>[], :ferret=>{:auto_flush=>true, :path=>"/Users/bbigelow/dev/zebra/index/development/document", :or_default=>false, :key=>:key, :handle_parse_errors=>true, :create_if_missing=>true, :default_field=>nil}, :ferret_fields=>{:body=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:body, :store=>:no, :term_vector=>:with_positions_offsets}, :title=>{:highlight=>:yes, :index=>:yes, :boost=>1.0, :via=>:title, :store=>:no, :term_vector=>:with_positions_offsets}}}
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" [0m
+Rendering template within layouts/application
+Rendering documents/index
+Rendered users/_top_users (0.1ms)
+Rendered dashboard/_recent_items (0.0ms)
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/documents]

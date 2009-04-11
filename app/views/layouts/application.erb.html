@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Chameleon Coders</title>
-<meta name="keywords" content="web,development,backend,database" />
-<meta name="description" content="Chemeleon Coders backend web development." />
+<title>Zebra</title>
+<meta name="keywords" content="community,blog,discussion,social,network" />
+<meta name="description" content="Zebra, The 'Official' community." />
 <%= stylesheet_link_tag 'default' %>
 <%= javascript_include_tag 'jquery-1.3.1', :cache => true %>
 <%= javascript_include_tag 'application', :cache => true %>
@@ -19,17 +19,15 @@
   <div id="columnA">
 		<div id="menu-wrap">
 		  <div id="menu">
-				<%= yield :menu %>
+				<%= navigation [:discussions, :blogs, :documents]%>
 			</div>
 		</div>
 		<p style="color: green"><%= flash[:notice] %></p>
     <%= yield %>
   </div>
   <div id="columnB">
-    <ul>
-			<li>Top Users</li>
-			<li>Popular Tags</li>
-		</ul>
+		<%= render :partial => "users/top_users" %>
+    <%= render :partial => "dashboard/recent_items" %>
   </div>
   <div style="clear: both;">&nbsp;</div>
 </div>
