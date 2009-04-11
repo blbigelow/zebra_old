@@ -15,7 +15,7 @@ body {
 	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #C9C9C9;
-
+	min-width: 830px;
 }
 
 h1 {
@@ -54,7 +54,7 @@ a:hover {
 /** HEADER */
 
 #header {
-	width: 800px;
+	width: 85%;
 	height: 60px;
 	margin: 0px auto;
 	padding: 10px 0 0 0;
@@ -93,7 +93,7 @@ a:hover {
 }
 
 #menu {
-	width: 800px;
+	width: 640px;
 	height: 20px;
 	margin: 0px auto;
 }
@@ -132,14 +132,15 @@ a:hover {
 /** CONTENT */
 
 #content {
-	width: 800px;
+	width: 85%;
+	min-width: 800px;
 	margin: 0px auto;
 	padding: 0;
 }
 
 #columnA {
 	float: right;
-	width: 520px;
+	width: 640px;
 	margin-top: -1px;
 }
 
@@ -162,7 +163,8 @@ a:hover {
 
 #columnB {
 	float: left;
-	width: 235px;
+	width: 160px;
+	min-height: 550px;
 	margin-left: 0px;
 	background: #1A1A1A repeat-x left top;
 }
@@ -181,12 +183,14 @@ a:hover {
 /** FOOTER */
 
 #footer-wrap {
+	width: 85%;
 	background: #1A1A1A repeat-x left top;
 	height: 20px;
+	margin-left: 20px;
 }
 
 #footer {
-	width: 800px;
+	width: 85%;
 	margin: 0px auto;
 	padding-top: 2px;
 	font-size: 8px;

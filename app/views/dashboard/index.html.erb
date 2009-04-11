@@ -1,9 +1,10 @@
-<% content_for :left_bar do %>
-	<ul>
-		<li>Top Users</li>
-		<li>Popular Tags</li>
-	</ul>
-<% end %>
+<% content_for :menu do %>
+    <ul>
+      <li><%= link_to "Discussions", :controller => "discussions", :action => "index" %></li>
+      <li><%= link_to "Blogs", :controller => "blogs", :action => "index" %></li>
+      <li><%= link_to "Documents", :controller => "documents", :action => "index" %></li>
+    </ul>
+<% end%>
 
 <h1>Latest Things</h1>
 <ul>

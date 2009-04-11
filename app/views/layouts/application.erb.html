@@ -19,18 +19,17 @@
   <div id="columnA">
 		<div id="menu-wrap">
 		  <div id="menu">
-		    <ul>
-		      <li class="current_page"><%= link_to "Discussions", :controller => "discussions", :action => "index" %></li>
-		      <li><%= link_to "Blogs", :controller => "blogs", :action => "index" %></li>
-		      <li><%= link_to "Documents", :controller => "documents", :action => "index" %></li>
-		    </ul>
-		  </div>
+				<%= yield :menu %>
+			</div>
 		</div>
 		<p style="color: green"><%= flash[:notice] %></p>
     <%= yield %>
   </div>
   <div id="columnB">
-    <%= yield :left_bar %>
+    <ul>
+			<li>Top Users</li>
+			<li>Popular Tags</li>
+		</ul>
   </div>
   <div style="clear: both;">&nbsp;</div>
 </div>
