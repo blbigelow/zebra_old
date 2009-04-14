@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :blog_comments
 
-  map.resources :blogs
+  map.resources :blogs, :tags
 
   map.resources :documents
 

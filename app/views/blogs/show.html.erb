@@ -8,6 +8,12 @@
   <%=h @blog.body %>
 </p>
 
+<p>
+	<b>Tagged With:</b>
+	<% @blog.tags.each do |tag| -%>
+		<%= link_to_tag tag %>
+	<% end -%>
+</p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>

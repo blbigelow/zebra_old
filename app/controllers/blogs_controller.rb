@@ -15,7 +15,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.xml
   def show
-    @blog = Blog.find(params[:id])
+    @blog = Blog.find(params[:id], :include => :tags)
 
     respond_to do |format|
       format.html # show.html.erb
