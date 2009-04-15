@@ -11,4 +11,19 @@ class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   
   layout 'application'
+  
+  private
+  
+  def log_activity
+    @action = Action.new
+    @action.user_id = current_user.id
+    @action.controller = controller_name
+    @action.action = action_name
+    if ( params[:id] != nil )
+      @action.object_id = params[:id]
+    end
+    @action.session_id = session.session_id
+    
+    @action.save
+  end
 end
