@@ -1,3 +1,6 @@
+<% content_for :javascripts do %>
+	<%= javascript_include_tag :fckeditor %>
+<% end %>
 <h1>Editing document</h1>
 
 <% form_for(@document) do |f| %>
@@ -13,7 +16,7 @@
   </p>
   <p>
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= fckeditor_textarea("document", "body", :toolbarSet => 'Simple', :width => '100%', :height => '200px') %>
   </p>
   <p>
     <%= f.label :rating %><br />

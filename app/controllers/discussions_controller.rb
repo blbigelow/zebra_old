@@ -1,5 +1,6 @@
 class DiscussionsController < ApplicationController
   before_filter :login_required
+  after_filter :log_activity, :only => [:show]
   
   # GET /discussions
   # GET /discussions.xml

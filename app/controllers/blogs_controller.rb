@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_filter :login_required
-  before_filter :log_activity, :only => [:show]
+  after_filter :log_activity, :only => [:show]
   # GET /blogs
   # GET /blogs.xml
   def index

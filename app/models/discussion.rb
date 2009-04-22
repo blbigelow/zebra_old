@@ -1,5 +1,5 @@
 class Discussion < ActiveRecord::Base
   has_many :discussions, :class_name => "Discussion", :foreign_key => "parent_id"
-  acts_as_ferret :fields => [:title, :body]
+  
   acts_as_taggable
 end

@@ -96,6 +96,11 @@ a:hover {
 	color: #FFFFFF;
 }
 
+#header_search {
+	float: right;
+	margin-top: -10px;
+}
+
 /** MENU */
 
 #menu-wrap {
@@ -164,7 +169,7 @@ a:hover {
 }
 
 #columnA b {
-	color: #0DF52D;
+	/*color: #0DF52D;*/
 }
 
 #columnA ul {

@@ -3,10 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/helpers/application_helper.rb</string>
+	<string>app/controllers/dashboard_controller.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>zebra</string>
 			<key>regexFolderFilter</key>
@@ -16,31 +18,107 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>253</integer>
+	<integer>223</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app/helpers/application_helper.rb</key>
+		<key>app/controllers/dashboard_controller.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>3</integer>
+				<integer>5</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>app/models/user.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>16</integer>
+				<key>line</key>
+				<integer>7</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>13</integer>
+		</dict>
+		<key>config/aaf.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>47</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>log/acts_as_ferret.log</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>vendor/plugins/acts_as_ferret/lib/acts_as_ferret.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>98</integer>
+				<key>line</key>
+				<integer>460</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>133</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>86</integer>
+				<key>line</key>
+				<integer>460</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>98</integer>
+				<key>line</key>
+				<integer>460</integer>
+			</dict>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>app/helpers/application_helper.rb</string>
+		<string>vendor/plugins/acts_as_ferret/lib/acts_as_ferret.rb</string>
+		<string>config/aaf.rb</string>
+		<string>app/controllers/dashboard_controller.rb</string>
+		<string>app/models/user.rb</string>
+		<string>log/acts_as_ferret.log</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{314, 83}, {749, 795}}</string>
+	<string>{{241, 73}, {682, 805}}</string>
 </dict>
 </plist>

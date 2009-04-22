@@ -1,5 +1,6 @@
 class DocumentsController < ApplicationController
   before_filter :login_required
+  after_filter :log_activity, :only => [:show]
   
   # GET /documents
   # GET /documents.xml
