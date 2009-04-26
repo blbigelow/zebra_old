@@ -1,0 +1,39 @@
+h2. Reason for the Name
+
+Zebra is a nickname for referee or official. Hence the "Official" community. Official's "know everything" which is the hope of this application. Zebra can be the host of all knowledge for a group. 
+
+h2. Release 1.0 Planned Features
+
+h3. Blogs
+
+[[Blogs|Feature list]]
+
+h3. Discussions
+
+[[Discussions|Feature list]]
+
+h3. Documents
+
+[[Documents|Feature list]]
+
+h3. Searching
+
+[[Searching|Feature list]]
+
+h3. Dashboard
+
+[[Dashboard|Feature list]]
+
+h3. Tagging
+
+[[Tagging|Feature list]]
+
+h3. Admin Section
+
+[[Admin|Feature list]]
+
+h2. Release 2.0 Planned Features
+
+h3. Multiple Communities
+
+[[Communities|Feature list]]

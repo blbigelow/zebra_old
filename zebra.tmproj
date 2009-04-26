@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/controllers/dashboard_controller.rb</string>
+	<string>config/initializers/aaf.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,56 +21,42 @@
 	<integer>223</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app/controllers/dashboard_controller.rb</key>
+		<key>app/models/document_comment.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>19</integer>
 				<key>line</key>
-				<integer>5</integer>
+				<integer>1</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>app/models/user.rb</key>
+		<key>config/environment.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>0</integer>
 				<key>line</key>
 				<integer>7</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>13</integer>
+			<integer>0</integer>
 		</dict>
-		<key>config/aaf.rb</key>
+		<key>config/initializers/aaf.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>47</integer>
-				<key>line</key>
-				<integer>9</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>log/acts_as_ferret.log</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
 				<integer>1</integer>
+				<key>line</key>
+				<integer>11</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -107,18 +93,31 @@
 				<integer>460</integer>
 			</dict>
 		</dict>
+		<key>vendor/plugins/acts_as_ferret/tasks/ferret.rake</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>vendor/plugins/acts_as_ferret/lib/acts_as_ferret.rb</string>
-		<string>config/aaf.rb</string>
-		<string>app/controllers/dashboard_controller.rb</string>
-		<string>app/models/user.rb</string>
-		<string>log/acts_as_ferret.log</string>
+		<string>vendor/plugins/acts_as_ferret/tasks/ferret.rake</string>
+		<string>config/initializers/aaf.rb</string>
+		<string>app/models/document_comment.rb</string>
+		<string>config/environment.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{241, 73}, {682, 805}}</string>
+	<string>{{28, 73}, {682, 805}}</string>
 </dict>
 </plist>

@@ -4,7 +4,7 @@ ActsAsFerret::define_index('shared',
    Discussion => {:fields => [:title, :body, :tag_list]},
    Document    => {:fields => [:title, :body, :tag_list]},
    BlogComment => {:fields => [:body]},
-   Document_comment => {:fields => [:body]}
+   DocumentComment => {:fields => [:body]}
  },
  :ferret   => {
    :default_fields => [:title, :body, :tag_list]
