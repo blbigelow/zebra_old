@@ -17,11 +17,8 @@
   <h1>Zebra</h1>
   <h2><b><a href="/">The Official Community</a></b></h2>
 	<div id="header_search">
-		<% form_tag({:controller => "search", :action => "search"}, {:class => "header_form"}) do %>
-			<%= %>
-		  <%= text_field_tag :q, nil, {:size => 20, :class => "header_search_field"} %>
-			<%= submit_tag 'Search'%>
-		<% end -%>
+		<%= render :partial => "users/user_bar" %>
+	
 	</div>
 </div>
 <div id="content">
@@ -30,6 +27,11 @@
 		  <div id="menu">
 				<%= navigation [:discussions, :blogs, :documents]%>
 			</div>
+				<% form_tag({:controller => "search", :action => "search"}, {:class => "header_form"}) do %>
+					<%= %>
+				  <%= text_field_tag :q, nil, {:size => 20, :class => "header_search_field"} %>
+					<%= submit_tag 'Search'%>
+				<% end -%>
 		</div>
 		<p style="color: green"><%= flash[:notice] %></p>
     <%= yield %>
