@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
     if ( params[:id] != nil )
       @action.object_id = params[:id]
     end
-    @action.session_id = session.session_id
+    @action.session_id = request.session_options[:id]
     
     @action.save
   end

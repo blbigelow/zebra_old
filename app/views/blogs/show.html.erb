@@ -15,5 +15,21 @@
 	<% end -%>
 </p>
 
+<p>
+	<b>Comments</b>
+	<div id="comments">
+		<%= render :partial => 'blog_comments/blog_comment', :collection => @blog.blog_comments %>
+	</div>
+</p>
+
+<% form_for BlogComment.new(:blog => @blog) do |f| -%>
+  <%= f.hidden_field :blog_id %>
+	<p>
+		<%= f.label :body %><br/>
+		<%= f.text_field :body %>
+	</p>
+	<p><%= f.submit "Add Comment" %></p>
+<% end -%>
+
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
