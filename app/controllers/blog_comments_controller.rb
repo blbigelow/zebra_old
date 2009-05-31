@@ -2,16 +2,17 @@ class BlogCommentsController < ApplicationController
   
   before_filter :login_required
   
-  # POST /blog_comments
-  # POST /blog_comments.xml
   # POST /blog_comments.js
   def create
     @blog_comment = BlogComment.new(params[:blog_comment])
+    @blog_comment.user_id = current_user.id
     @blog_comment.save()
 
+    flash[:notice] = 'Comment was successfully created.'
+    
     respond_to do |format|
-        flash[:notice] = 'BlogComments was successfully created.'
-        format.js
+        format.html { redirect_to @blog_comment.blog }
+        format.js { render :layout => false }
     end
   end
 

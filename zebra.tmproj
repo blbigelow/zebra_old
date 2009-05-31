@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/blogs/show.html.erb</string>
+	<string>public/javascripts/application.js</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,28 +21,28 @@
 	<integer>272</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app/controllers/application_controller.rb</key>
+		<key>app/controllers/blog_comments_controller.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>53</integer>
+				<integer>43</integer>
 				<key>line</key>
-				<integer>24</integer>
+				<integer>7</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>app/controllers/blog_comments_controller.rb</key>
+		<key>app/controllers/blogs_controller.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>17</integer>
+				<integer>4</integer>
 				<key>line</key>
-				<integer>13</integer>
+				<integer>46</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -68,9 +68,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>3</integer>
+				<integer>1</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -82,9 +82,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>9</integer>
 				<key>line</key>
-				<integer>15</integer>
+				<integer>20</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -96,7 +96,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>23</integer>
+				<integer>41</integer>
 				<key>line</key>
 				<integer>13</integer>
 			</dict>
@@ -167,15 +167,15 @@
 	<key>openDocuments</key>
 	<array>
 		<string>app/controllers/blog_comments_controller.rb</string>
+		<string>app/controllers/blogs_controller.rb</string>
 		<string>app/views/blogs/show.html.erb</string>
+		<string>public/javascripts/application.js</string>
 		<string>app/views/blog_comments/_blog_comment.html.erb</string>
 		<string>app/views/blog_comments/create.js.erb</string>
-		<string>public/javascripts/application.js</string>
-		<string>app/controllers/application_controller.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{101, 72}, {719, 806}}</string>
+	<string>{{4, 72}, {719, 806}}</string>
 </dict>
 </plist>

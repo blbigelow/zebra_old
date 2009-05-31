@@ -28,12 +28,11 @@
 				<%= navigation [:discussions, :blogs, :documents]%>
 			</div>
 				<% form_tag({:controller => "search", :action => "search"}, {:class => "header_form"}) do %>
-					<%= %>
 				  <%= text_field_tag :q, nil, {:size => 20, :class => "header_search_field"} %>
 					<%= submit_tag 'Search'%>
 				<% end -%>
 		</div>
-		<p style="color: green"><%= flash[:notice] %></p>
+		<p id="flash" ><%= flash[:notice] %></p>
     <%= yield %>
   </div>
   <div id="columnB">

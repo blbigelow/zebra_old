@@ -1,0 +1,4 @@
+$("#flash").remove();
+$("#new_discussion").before('<div id="flash"><%= escape_javascript(flash.delete(:notice)) %></div>');
+$("#replies").append("<%= escape_javascript(render(:partial => @discussion)) %>");
+$("#new_discussion")[0].reset();

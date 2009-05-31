@@ -1,4 +1,4 @@
-alert('Show this!');
-//$("#new_blog_comment").before('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+$("#flash").remove();
+$("#new_blog_comment").before('<div id="flash"><%= escape_javascript(flash.delete(:notice)) %></div>');
 $("#comments").append("<%= escape_javascript(render(:partial => @blog_comment)) %>");
-//$("#new_blog_coment")[0].reset();
+$("#new_blog_comment")[0].reset();

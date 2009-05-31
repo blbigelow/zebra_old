@@ -44,12 +44,14 @@ class DiscussionsController < ApplicationController
   # POST /discussions.xml
   def create
     @discussion = Discussion.new(params[:discussion])
-
+    @discussion.user_id = current_user.id
+    
     respond_to do |format|
       if @discussion.save
         flash[:notice] = 'Discussion was successfully created.'
         format.html { redirect_to(@discussion) }
         format.xml  { render :xml => @discussion, :status => :created, :location => @discussion }
+        format.js { render :layout => false }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @discussion.errors, :status => :unprocessable_entity }
