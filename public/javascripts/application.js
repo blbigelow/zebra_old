@@ -12,5 +12,5 @@ jQuery.fn.submitWithAjax = function() {
 
 $(document).ready( function(){
 	$("#new_blog_comment").submitWithAjax();
-	$("#new_discussion").submitWithAjax();
+	$("#new_document_comment").submitWithAjax();
 });

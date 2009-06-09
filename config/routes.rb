@@ -7,6 +7,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
 
   map.resource :session
+  
+  map.resources :document_comments
 
   map.resources :blog_comments
 

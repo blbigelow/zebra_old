@@ -1,0 +1,2 @@
+module DocumentCommentsHelper
+end

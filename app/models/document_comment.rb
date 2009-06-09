@@ -1,4 +1,4 @@
 class DocumentComment < ActiveRecord::Base
-  has_one :document
+  belongs_to :document
   acts_as_ferret
 end

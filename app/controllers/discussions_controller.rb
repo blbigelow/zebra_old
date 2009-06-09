@@ -51,7 +51,6 @@ class DiscussionsController < ApplicationController
         flash[:notice] = 'Discussion was successfully created.'
         format.html { redirect_to(@discussion) }
         format.xml  { render :xml => @discussion, :status => :created, :location => @discussion }
-        format.js { render :layout => false }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @discussion.errors, :status => :unprocessable_entity }

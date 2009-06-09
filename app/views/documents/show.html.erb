@@ -1,16 +1,11 @@
 <p>
-  <b>Version:</b>
-  <%=h @document.version %>
-</p>
-
-<p>
   <b>Title:</b>
   <%=h @document.title %>
 </p>
 
 <p>
   <b>Body:</b>
-  <%=h @document.body %>
+  <%= @document.body %>
 </p>
 
 <p>
@@ -18,11 +13,23 @@
   <%=h @document.rating %>
 </p>
 
-<p>
-  <b>Allow comments:</b>
-  <%=h @document.allow_comments %>
-</p>
-
+<% if @document.allow_comments %>
+	<p>
+		<b>Comments</b>
+		<div id="comments">
+			<%= render :partial => 'document_comments/document_comment', :collection => @document.document_comments %>
+		</div>
+	</p>
+	
+	<% form_for DocumentComment.new(:document => @document) do |f| -%>
+	  <%= f.hidden_field :document_id %>
+		<p>
+			<%= f.label :body %><br/>
+			<%= f.text_field :body %>
+		</p>
+		<p><%= f.submit "Add Comment" %></p>
+	<% end -%>
+<% end -%>
 
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>

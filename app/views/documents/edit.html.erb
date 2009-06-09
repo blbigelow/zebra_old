@@ -7,20 +7,12 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :version %><br />
-    <%= f.text_field :version %>
-  </p>
-  <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
   <p>
     <%= f.label :body %><br />
     <%= fckeditor_textarea("document", "body", :toolbarSet => 'Simple', :width => '100%', :height => '200px') %>
-  </p>
-  <p>
-    <%= f.label :rating %><br />
-    <%= f.text_field :rating %>
   </p>
   <p>
     <%= f.label :allow_comments %><br />
